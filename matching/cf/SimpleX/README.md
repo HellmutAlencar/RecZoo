@@ -4,6 +4,14 @@ SimpleX is a simple and strong baseline model for collaborative filtering tasks.
 
 + Kelong Mao, Jieming Zhu, Jinpeng Wang, Quanyu Dai, Zhenhua Dong, Xi Xiao, Xiuqiang He. [SimpleX: A Simple and Strong Baseline for Collaborative Filtering](https://arxiv.org/abs/2109.12613), in CIKM 2021.
 
+## Extra
+Para criar o ambiente Conda:
+```
+conda create -n SimpleX python=3.6.5 torch=1.0.1.post2 pandas=0.23.0 numpy=1.18.1 scipy=1.1.0 scikit-learn=0.23.1 pyyaml=5.1 h5py=2.7.1 tqdm=4.59.0 faiss-cpu=1.7.0 recbox=0.0.4
+```
+
+Depois é só seguir os passos descritos
+
 ## Model Structure
 
 SimpleX presents a simple unified CF model, which follows the commonly-used two-tower network structure to support efficient retrieval from a large item corpus. The user tower outputs a weighted combination of user profile embedding and aggregated behavior sequence embedding. The model structure is general, and with appropriate settings, it can instantiate related models such as MF, YouTubeNet, and one-hop GNN. Based on the model, we evaluate the effectiveness of cosine contrastive loss and negative sampling. 
